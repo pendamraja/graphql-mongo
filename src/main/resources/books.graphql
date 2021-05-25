@@ -1,0 +1,24 @@
+schema {
+    query: Query
+}
+
+type Query {
+    findallBooks: [Book]
+    findbook(id: String): Book
+    findbookByname(name: String): Book
+     }
+
+type Book {
+    id: String
+    name: String
+    author: Author
+    publisher: String
+    publishedDate: String
+}
+
+type Author {
+    id: String
+    name: String
+    age: String
+    books: [Book]
+}
